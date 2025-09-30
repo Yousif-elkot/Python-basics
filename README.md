@@ -35,7 +35,14 @@ Each day includes hands-on projects, code improvements, and detailed documentati
 - Menu-driven interface design
 - CRUD operations and user experience
 
-**💡 Key Skills:** Python fundamentals, file I/O, function design, CLI development
+**� Password Generator**
+
+- Cryptographically secure random generation
+- Advanced CLI interfaces with argparse
+- Security-focused programming practices
+- Character set manipulation and validation
+
+**�💡 Key Skills:** Python fundamentals, file I/O, function design, CLI development, security programming, professional documentation
 
 ---
 
@@ -57,7 +64,7 @@ _Each day will introduce new concepts building toward Cloud Engineering applicat
 
 ### **Python Mastery**
 
-- [ ] Core syntax and data structures
+- [ ✅ ] Core syntax and data structures
 - [ ] Object-oriented programming
 - [ ] Error handling and testing
 - [ ] File I/O and data processing
@@ -65,10 +72,10 @@ _Each day will introduce new concepts building toward Cloud Engineering applicat
 
 ### **Development Skills**
 
-- [ ] Git/GitHub professional workflows
-- [ ] Code documentation and comments
-- [ ] Project structure and organization
-- [ ] Debugging and problem-solving
+- [ ✅ ] Git/GitHub professional workflows
+- [ ✅ ] Code documentation and comments
+- [ ✅ ] Project structure and organization
+- [ ✅ ] Debugging and problem-solving
 - [ ] Performance optimization
 
 ### **Cloud Engineering Prep**
@@ -86,10 +93,10 @@ _Each day will introduce new concepts building toward Cloud Engineering applicat
 | Metric                | Count  |
 | --------------------- | ------ |
 | **Days Completed**    | 1 / 30 |
-| **Projects Built**    | 2      |
-| **Functions Written** | 15+    |
-| **Git Commits**       | 10+    |
-| **Lines of Code**     | 200+   |
+| **Projects Built**    | 3      |
+| **Functions Written** | 25+    |
+| **Git Commits**       | 15+    |
+| **Lines of Code**     | 400+   |
 
 ---
 
@@ -97,15 +104,15 @@ _Each day will introduce new concepts building toward Cloud Engineering applicat
 
 **Languages:** Python 3  
 **Tools:** Git, GitHub, VS Code  
-**Libraries:** json, sys, typing  
-**Concepts:** CLI development, data persistence, error handling
+**Libraries:** json, sys, typing, argparse, string, random  
+**Concepts:** CLI development, data persistence, error handling, security programming, documentation
 
 ---
 
 ## 🔗 Quick Navigation
 
-- **[Day 1 Projects](day1/)** — Unit Converter & Phone Book CLI
-- **[Latest Code](day1/Phone_book.py)** — Most recent project
+- **[Day 1 Projects](day1/)** — Unit Converter, Phone Book CLI & Password Generator
+- **[Latest Code](day1/Password_gen.py)** — Most recent project
 - **[Learning Notes](day1/README.md)** — Detailed progress documentation
 
 ---
