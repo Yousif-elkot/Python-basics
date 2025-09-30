@@ -5,7 +5,7 @@ Password Generator - Secure CLI Password Generation Tool
 A professional command-line password generator with customizable security options.
 Supports various character sets, length customization, and security features.
 
-Author: [Your Name]
+Author: [Yousif Elkattawy]
 Date: September 30, 2025
 Version: 1.0
 """
