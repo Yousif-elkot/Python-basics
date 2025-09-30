@@ -61,3 +61,73 @@ This exercise focuses on:
 - Possibly extend with more unit categories (weight, time, etc.).
 
 ---
+
+📱 Phone Book CLI Application
+🎯 Objective
+
+Build a command-line phone book application to manage contacts.
+This project introduces:
+
+Working with Python dictionaries for data storage
+
+Using the json module for persistence
+
+Handling user input validation
+
+Structuring a basic menu-driven CLI program
+
+✅ Version 1 (Initial)
+
+Features:
+
+Add new contacts (name + phone number)
+
+Search contacts by name
+
+Delete contacts with confirmation
+
+List all contacts in a clean format
+
+Save contacts automatically to my_contacts.json
+
+Demonstrates:
+
+Dictionary operations (add, search, delete)
+
+File I/O with json.dump() and json.load()
+
+Exception handling with try/except (FileNotFoundError)
+
+Loops and branching (while, if/elif/else)
+
+🔧 Version 2 (Planned Improvements)
+
+Refactor code into functions (add_contact(), search_contact(), etc.) for clarity.
+
+Add ability to edit/update contacts.
+
+Store multiple fields per contact (e.g., email, address).
+
+Export/import contacts (CSV or SQLite database).
+
+Enhance input validation (e.g., valid phone number format).
+
+📚 Learning Outcomes
+
+Learned how to build persistent CLI tools with Python.
+
+Practiced separating program logic from data storage.
+
+Reinforced error handling and input validation concepts.
+
+Strengthened Git/GitHub skills by documenting iterations with commits.
+
+🚀 Next Steps
+
+Explore modularization (splitting code into multiple files).
+
+Add unit tests for reliability.
+
+Consider creating a GUI version using Tkinter or PyQt.
+
+Think about scalability — moving from JSON to a database-backed phonebook.
