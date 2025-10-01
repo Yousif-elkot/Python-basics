@@ -46,15 +46,31 @@ Each day includes hands-on projects, code improvements, and detailed documentati
 
 ---
 
-### 🔄 **Day 2** — _Coming Next..._
+### ✅ **Day 2** — _Arrays, Lists & Search Algorithms_
 
-📁 **[In Progress](day2/README.md)**
+📁 **[View Details →](day2/Smart_Todo_List/README.md)**
 
-_Planning: Object-oriented programming concepts_
+**📝 Smart Todo List**
+
+- Dynamic arrays and list operations (insertion, deletion, traversal)
+- Linear search algorithms with multiple criteria
+- Sorting algorithms with custom key functions
+- Advanced CLI interface with comprehensive error handling
+- Data persistence with JSON serialization
+
+**💡 Key Skills:** Arrays & lists, search algorithms, sorting algorithms, data structures, algorithm complexity analysis
 
 ---
 
-### � **Days 3-30** — _The Adventure Continues..._
+### 🔄 **Day 3** — _Coming Next..._
+
+📁 **[Planning](day3/README.md)**
+
+_Planning: Stacks, Queues & Advanced Array Operations_
+
+---
+
+### 🚀 **Days 4-30** — _The Adventure Continues..._
 
 _Each day will introduce new concepts building toward Cloud Engineering applications_
 
@@ -65,6 +81,7 @@ _Each day will introduce new concepts building toward Cloud Engineering applicat
 ### **Python Mastery**
 
 - [ ✅ ] Core syntax and data structures
+- [ ✅ ] Arrays, lists, and linear data structures
 - [ ] Object-oriented programming
 - [ ] Error handling and testing
 - [ ] File I/O and data processing
@@ -92,11 +109,11 @@ _Each day will introduce new concepts building toward Cloud Engineering applicat
 
 | Metric                | Count  |
 | --------------------- | ------ |
-| **Days Completed**    | 1 / 30 |
-| **Projects Built**    | 3      |
-| **Functions Written** | 25+    |
-| **Git Commits**       | 15+    |
-| **Lines of Code**     | 400+   |
+| **Days Completed**    | 2 / 30 |
+| **Projects Built**    | 4      |
+| **Functions Written** | 42+    |
+| **Git Commits**       | 25+    |
+| **Lines of Code**     | 900+   |
 
 ---
 
@@ -104,16 +121,17 @@ _Each day will introduce new concepts building toward Cloud Engineering applicat
 
 **Languages:** Python 3  
 **Tools:** Git, GitHub, VS Code  
-**Libraries:** json, sys, typing, argparse, string, random  
-**Concepts:** CLI development, data persistence, error handling, security programming, documentation
+**Libraries:** json, sys, typing, argparse, string, random, datetime, os  
+**Concepts:** CLI development, data persistence, error handling, security programming, documentation, arrays & lists, search algorithms, sorting algorithms, algorithm complexity analysis
 
 ---
 
 ## 🔗 Quick Navigation
 
 - **[Day 1 Projects](day1/)** — Unit Converter, Phone Book CLI & Password Generator
-- **[Latest Code](day1/Password_gen.py)** — Most recent project
-- **[Learning Notes](day1/README.md)** — Detailed progress documentation
+- **[Day 2 Projects](day2/)** — Smart Todo List with Arrays & Search Algorithms
+- **[Latest Code](day2/Smart_Todo_List/todo_list.py)** — Most recent project
+- **[Learning Notes](day2/Smart_Todo_List/README.md)** — Detailed progress documentation
 
 ---
 
