@@ -228,160 +228,164 @@ class CommandStack:
             print(f"Error loading from JSON: {e}")
             return False
 
-# Testing code
-if __name__ == "__main__":
-    print("Testing Command class...")
-    print("=" * 60)
+# CLI Interface
+def main():
+    """Command-line interface for the command history manager."""
+    import argparse
+    import sys
     
-    # Test 1: Create a command
-    cmd1 = Command("git status", datetime.now(), True, 0)
-    print("Test 1 - Successful command:")
-    print(cmd1)
-    print()
+    parser = argparse.ArgumentParser(
+        description='Professional Command History Manager with Undo/Redo',
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog='''
+Examples:
+  %(prog)s add "git status" -e 0          Add successful command
+  %(prog)s add "make build" -e 1          Add failed command
+  %(prog)s list                           Show all history
+  %(prog)s list -n 10                     Show last 10 commands
+  %(prog)s search git                     Search for 'git' commands
+  %(prog)s undo                           Undo last command
+  %(prog)s redo                           Redo undone command
+  %(prog)s stats                          Show statistics
+  %(prog)s save history.json              Save to file
+  %(prog)s load history.json              Load from file
+        '''
+    )
     
-    # Test 2: Failed command
-    cmd2 = Command("make build", datetime.now(), True, 127)
-    print("Test 2 - Failed command:")
-    print(cmd2)
-    print()
+    subparsers = parser.add_subparsers(dest='command', help='Available commands')
     
-    # Test 3: Not executed yet
-    cmd3 = Command("ls -la", datetime.now(), executed=False)
-    print("Test 3 - Not executed:")
-    print(cmd3)
-    print()
+    # Add command
+    add_parser = subparsers.add_parser('add', help='Add a command to history')
+    add_parser.add_argument('cmd', help='Command to add')
+    add_parser.add_argument('-e', '--exit-code', type=int, default=0, help='Exit code (default: 0)')
+    add_parser.add_argument('-f', '--file', default='command_history.json', help='History file')
     
-    # Test 4: to_dict and from_dict
-    print("Test 4 - JSON serialization:")
-    cmd_dict = cmd1.to_dict()
-    print(f"Dictionary: {cmd_dict}")
+    # List commands
+    list_parser = subparsers.add_parser('list', help='List command history')
+    list_parser.add_argument('-n', '--number', type=int, help='Number of recent commands to show')
+    list_parser.add_argument('-f', '--file', default='command_history.json', help='History file')
     
-    cmd_restored = Command.from_dict(cmd_dict)
-    print(f"Restored: {cmd_restored}")
-    print(f"Match: {cmd1.command == cmd_restored.command}")
-    print()
+    # Search commands
+    search_parser = subparsers.add_parser('search', help='Search command history')
+    search_parser.add_argument('query', help='Search query')
+    search_parser.add_argument('-f', '--file', default='command_history.json', help='History file')
     
-    print("✅ All tests complete!")
-    print("\n" + "=" * 60)
-        
-    print("Testing CommandStack...")
-    print("=" * 60)
+    # Undo command
+    undo_parser = subparsers.add_parser('undo', help='Undo last command')
+    undo_parser.add_argument('-f', '--file', default='command_history.json', help='History file')
     
-    # Create stack
-    stack = CommandStack(max_size=3)
+    # Redo command
+    redo_parser = subparsers.add_parser('redo', help='Redo undone command')
+    redo_parser.add_argument('-f', '--file', default='command_history.json', help='History file')
     
-    # Test push
-    print("\n1. Testing push:")
-    stack.push(Command("ls", datetime.now(), True, 0))
-    stack.push(Command("cd /tmp", datetime.now(), True, 0))
-    stack.push(Command("pwd", datetime.now(), True, 0))
-    print(f"Stack size: {stack.size()}")
+    # Stats command
+    stats_parser = subparsers.add_parser('stats', help='Show statistics')
+    stats_parser.add_argument('-f', '--file', default='command_history.json', help='History file')
     
-    # Test peek
-    print("\n2. Testing peek:")
-    top = stack.peek()
-    print(f"Top command: {top.command if top else 'None'}")
-    print(f"Size after peek: {stack.size()}")  # Should still be 3
+    # Save command
+    save_parser = subparsers.add_parser('save', help='Save history to file')
+    save_parser.add_argument('output', help='Output file path')
+    save_parser.add_argument('-f', '--file', default='command_history.json', help='Current history file')
     
-    # Test pop
-    print("\n3. Testing pop:")
-    popped = stack.pop()
-    print(f"Popped: {popped.command if popped else 'None'}")
-    print(f"Size after pop: {stack.size()}")  # Should be 2
+    # Load command
+    load_parser = subparsers.add_parser('load', help='Load history from file')
+    load_parser.add_argument('input', help='Input file path')
+    load_parser.add_argument('-f', '--file', default='command_history.json', help='History file to save to')
     
-    # Test max size
-    print("\n4. Testing max size (limit=3):")
-    stack.push(Command("git status", datetime.now(), True, 0))
-    stack.push(Command("git commit", datetime.now(), True, 0))  # This should remove oldest!
-    print(f"Size: {stack.size()}")  # Should still be 3
+    args = parser.parse_args()
     
-    print("\n5. Testing undo/redo:")
-    print("Initial history:")
-    stack = CommandStack()
-    stack.push(Command("ls", datetime.now(), True, 0))
-    stack.push(Command("cd /tmp", datetime.now(), True, 0))
-    stack.push(Command("pwd", datetime.now(), True, 0))
-    print(f"  Size: {stack.size()}")
+    if not args.command:
+        parser.print_help()
+        sys.exit(1)
     
-    # Undo
-    print("\nAfter undo:")
-    undone = stack.undo()
-    print(f"  Undone: {undone.command if undone else 'None'}")
-    print(f"  History size: {stack.size()}")
-    
-    # Undo again
-    print("\nAfter second undo:")
-    undone = stack.undo()
-    print(f"  Undone: {undone.command if undone else 'None'}")
-    print(f"  History size: {stack.size()}")
-    
-    # Redo
-    print("\nAfter redo:")
-    redone = stack.redo()
-    print(f"  Redone: {redone.command if redone else 'None'}")
-    print(f"  History size: {stack.size()}")
-    
-    # Add new command (should clear undo stack!)
-    print("\nAfter adding new command:")
-    stack.push(Command("git status", datetime.now(), True, 0))
-    print(f"  History size: {stack.size()}")
-    print(f"  Can redo? {stack.redo() is not None}")  # Should be False!
-    
-    print("\n✅ Undo/Redo tests complete!")
-
-    print("\n6. Testing search:")
-    stack = CommandStack()
-    stack.push(Command("git status", datetime.now(), True, 0))
-    stack.push(Command("git commit", datetime.now(), True, 0))
-    stack.push(Command("ls -la", datetime.now(), True, 0))
-    stack.push(Command("git push", datetime.now(), True, 0))
-    
-    results = stack.search("git")
-    print(f"  Found {len(results)} commands with 'git':")
-    for cmd in results:
-        print(f"    - {cmd.command}")
-    
-    print("\n7. Testing statistics:")
-    stats = stack.get_statistics()
-    for key, value in stats.items():
-        print(f"  {key}: {value}")
-    
-    print("\n✅ Search & Stats tests complete!")
-
-    print("\n8. Testing JSON save/load:")
-    
-    # Create and populate a stack
-    stack1 = CommandStack()
-    stack1.push(Command("ls -la", datetime.now(), True, 0))
-    stack1.push(Command("cd /tmp", datetime.now(), True, 0))
-    stack1.push(Command("pwd", datetime.now(), True, 0))
-    stack1.undo()  # Put one in undo stack
-    
-    print(f"  Original stack size: {stack1.size()}")
-    print(f"  Original history: {[cmd.command for cmd in stack1._history]}")
-    
-    # Save to file
-    filename = "test_history.json"
-    if stack1.save_to_json(filename):
-        print(f"  ✅ Saved to {filename}")
-    
-    # Create new stack and load
-    stack2 = CommandStack()
-    if stack2.load_from_json(filename):
-        print(f"  ✅ Loaded from {filename}")
-        print(f"  Loaded stack size: {stack2.size()}")
-        print(f"  Loaded history: {[cmd.command for cmd in stack2._history]}")
-        
-        # Test that undo stack was restored
-        redone = stack2.redo()
-        print(f"  Can redo? {redone is not None}")
-        if redone:
-            print(f"  Redone command: {redone.command}")
-    
-    # Clean up
+    # Create/load stack
+    stack = CommandStack(max_size=1000)
     import os
-    if os.path.exists(filename):
-        os.remove(filename)
-        print(f"  🗑️  Cleaned up {filename}")
+    if os.path.exists(args.file):
+        stack.load_from_json(args.file)
     
-    print("\n✅ JSON save/load tests complete!")
+    # Execute command
+    if args.command == 'add':
+        cmd = Command(
+            command=args.cmd,
+            timestamp=datetime.now(),
+            executed=True,
+            exit_code=args.exit_code
+        )
+        stack.push(cmd)
+        stack.save_to_json(args.file)
+        print(f"✅ Added: {cmd}")
+    
+    elif args.command == 'list':
+        if stack.is_empty():
+            print("📭 No commands in history")
+        else:
+            commands = list(reversed(stack._history))  # Most recent first
+            if args.number:
+                commands = commands[:args.number]
+            
+            print(f"📜 Command History ({len(commands)} commands):")
+            print("=" * 80)
+            for i, cmd in enumerate(commands, 1):
+                print(f"{i:3}. {cmd}")
+    
+    elif args.command == 'search':
+        results = stack.search(args.query)
+        if not results:
+            print(f"🔍 No commands found matching '{args.query}'")
+        else:
+            print(f"🔍 Found {len(results)} commands matching '{args.query}':")
+            print("=" * 80)
+            for i, cmd in enumerate(results, 1):
+                print(f"{i:3}. {cmd}")
+    
+    elif args.command == 'undo':
+        undone = stack.undo()
+        if undone:
+            stack.save_to_json(args.file)
+            print(f"↩️  Undone: {undone}")
+        else:
+            print("⚠️  Nothing to undo")
+    
+    elif args.command == 'redo':
+        redone = stack.redo()
+        if redone:
+            stack.save_to_json(args.file)
+            print(f"↪️  Redone: {redone}")
+        else:
+            print("⚠️  Nothing to redo")
+    
+    elif args.command == 'stats':
+        if stack.is_empty():
+            print("📭 No commands in history")
+        else:
+            stats = stack.get_statistics()
+            print("📊 Command History Statistics:")
+            print("=" * 80)
+            print(f"  Total commands:       {stats['total']}")
+            print(f"  Executed:             {stats['executed']}")
+            print(f"  Not executed:         {stats['not_executed']}")
+            print(f"  Most common command:  {stats['most_common_command']}")
+            print(f"  Occurrences:          {stats['most_common_count']}")
+            
+            if stats['time_span_seconds'] > 0:
+                hours = stats['time_span_seconds'] / 3600
+                print(f"  Time span:            {hours:.2f} hours")
+    
+    elif args.command == 'save':
+        if stack.save_to_json(args.output):
+            print(f"💾 Saved history to {args.output}")
+        else:
+            print(f"❌ Failed to save to {args.output}")
+    
+    elif args.command == 'load':
+        if stack.load_from_json(args.input):
+            stack.save_to_json(args.file)
+            print(f"📂 Loaded history from {args.input}")
+            print(f"   Total commands: {stack.size()}")
+        else:
+            print(f"❌ Failed to load from {args.input}")
+
+
+if __name__ == "__main__":
+    main()
