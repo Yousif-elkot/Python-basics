@@ -62,11 +62,45 @@ Each day includes hands-on projects, code improvements, and detailed documentati
 
 ---
 
-### 🔄 **Day 3** — _Coming Next..._
+### ✅ **Day 3** — _Stacks, Queues & System Integration_
 
-📁 **[Planning](day3/README.md)**
+📁 **[View Details →](day3/README.md)**
 
-_Planning: Stacks, Queues & Advanced Array Operations_
+**🧮 Balanced Brackets Checker**
+
+- Stack (LIFO) data structure for bracket matching
+- Algorithm problem-solving with edge cases
+- Character-by-character validation logic
+- Comprehensive test suite with 11 test cases
+
+**🔄 Command History Manager**
+
+- Stack implementation with undo/redo functionality
+- Command tracking with timestamps and exit codes
+- Search through history with pattern matching
+- JSON persistence and statistics tracking
+- Professional CLI with argparse
+
+**📋 Task Queue Simulator**
+
+- Queue (FIFO) and Priority Queue implementations
+- Task scheduling with priority levels using heapq
+- Dual-mode operation (FIFO vs Priority)
+- Status tracking (pending/completed) with execution simulation
+- JSON persistence and comprehensive CLI
+
+**🖥️ System Monitor**
+
+- Python + Bash integration using subprocess module
+- Parse Linux system commands (free, df, uptime)
+- Deque-based time-series metric storage
+- Alert threshold detection and warnings
+- Full CLI with 4 commands: snapshot, monitor, history, export
+- JSON export for external tool integration
+
+**💡 Key Skills:** Stack (LIFO), Queue (FIFO), Priority Queue (heapq), Deque, Collections module, Subprocess integration, Bash command parsing, Time-series data, Alert systems, Argparse CLI design, JSON serialization, Dataclasses
+
+**☁️ Cloud Engineering Bridge:** AWS SQS message queues, CloudWatch monitoring & alarms, Event-driven architecture, Task scheduling patterns, Infrastructure automation, EC2 monitoring
 
 ---
 
@@ -109,20 +143,20 @@ _Each day will introduce new concepts building toward Cloud Engineering applicat
 
 | Metric                | Count  |
 | --------------------- | ------ |
-| **Days Completed**    | 2 / 30 |
-| **Projects Built**    | 4      |
-| **Functions Written** | 42+    |
-| **Git Commits**       | 25+    |
-| **Lines of Code**     | 900+   |
+| **Days Completed**    | 3 / 30 |
+| **Projects Built**    | 11     |
+| **Functions Written** | 100+   |
+| **Git Commits**       | 35+    |
+| **Lines of Code**     | 3000+  |
 
 ---
 
 ## 🛠️ Tech Stack
 
-**Languages:** Python 3  
-**Tools:** Git, GitHub, VS Code  
-**Libraries:** json, sys, typing, argparse, string, random, datetime, os  
-**Concepts:** CLI development, data persistence, error handling, security programming, documentation, arrays & lists, search algorithms, sorting algorithms, algorithm complexity analysis
+**Languages:** Python 3, Bash  
+**Tools:** Git, GitHub, VS Code, Linux CLI  
+**Libraries:** json, sys, typing, argparse, string, random, datetime, os, collections, heapq, subprocess, dataclasses  
+**Concepts:** CLI development, data persistence, error handling, security programming, documentation, arrays & lists, search algorithms, sorting algorithms, stacks (LIFO), queues (FIFO), priority queues, deques, system integration, subprocess management, time-series data, alert systems, bash parsing
 
 ---
 
@@ -130,8 +164,9 @@ _Each day will introduce new concepts building toward Cloud Engineering applicat
 
 - **[Day 1 Projects](day1/)** — Unit Converter, Phone Book CLI & Password Generator
 - **[Day 2 Projects](day2/)** — Smart Todo List with Arrays & Search Algorithms
-- **[Latest Code](day2/Smart_Todo_List/todo_list.py)** — Most recent project
-- **[Learning Notes](day2/Smart_Todo_List/README.md)** — Detailed progress documentation
+- **[Day 3 Projects](day3/)** — Balanced Brackets, Command History, Task Queue & System Monitor
+- **[Latest Code](day3/system_monitor.py)** — Most recent project
+- **[Learning Notes](day3/README.md)** — Detailed progress documentation
 
 ---
 
