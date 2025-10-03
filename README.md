@@ -104,7 +104,38 @@ Each day includes hands-on projects, code improvements, and detailed documentati
 
 ---
 
-### 🚀 **Days 4-30** — _The Adventure Continues..._
+### ✅ **Day 4** — _Trees, Recursion & File Systems_
+
+📁 **[View Details →](day4/README.md)**
+
+**🌳 Binary Search Tree**
+
+- TreeNode and BST class implementation
+- Insert and search operations (O(log n) average case)
+- All 4 traversals: inorder, preorder, postorder, level-order (BFS)
+- Delete operation with 3 cases (leaf, one child, two children)
+- Helper methods: count_nodes, height, find_min, find_max, is_balanced
+- ASCII tree visualization with box-drawing characters
+- Comprehensive testing suite
+
+**📁 Directory Tree Explorer CLI**
+
+- Recursive directory scanning and tree building
+- DirectoryNode tree structure (N-ary tree)
+- ASCII visualization with proper connectors (├──, └──, │)
+- Size calculation with human-readable formatting (bytes/KB/MB/GB)
+- Full CLI with argparse: show and stats commands
+- Depth limiting and ignore patterns (.git, node_modules, etc.)
+- Error handling for permission issues
+- Production-ready command-line tool
+
+**💡 Key Skills:** Recursion patterns (base case + recursive case), Binary Search Trees (BST), Tree traversal algorithms (DFS & BFS), N-ary trees, File system operations (os module), Recursive aggregation, ASCII art generation, CLI design with subparsers, Path manipulation, Error handling
+
+**☁️ Cloud Engineering Bridge:** S3 bucket structure exploration, File system monitoring, Directory size analysis, AWS CLI tree commands, Infrastructure inventory tools, Recursive operations on cloud resources
+
+---
+
+### 🚀 **Days 5-30** — _The Adventure Continues..._
 
 _Each day will introduce new concepts building toward Cloud Engineering applications_
 
@@ -143,11 +174,11 @@ _Each day will introduce new concepts building toward Cloud Engineering applicat
 
 | Metric                | Count  |
 | --------------------- | ------ |
-| **Days Completed**    | 3 / 30 |
-| **Projects Built**    | 11     |
-| **Functions Written** | 100+   |
-| **Git Commits**       | 35+    |
-| **Lines of Code**     | 3000+  |
+| **Days Completed**    | 4 / 30 |
+| **Projects Built**    | 13     |
+| **Functions Written** | 150+   |
+| **Git Commits**       | 40+    |
+| **Lines of Code**     | 3800+  |
 
 ---
 
@@ -156,7 +187,7 @@ _Each day will introduce new concepts building toward Cloud Engineering applicat
 **Languages:** Python 3, Bash  
 **Tools:** Git, GitHub, VS Code, Linux CLI  
 **Libraries:** json, sys, typing, argparse, string, random, datetime, os, collections, heapq, subprocess, dataclasses  
-**Concepts:** CLI development, data persistence, error handling, security programming, documentation, arrays & lists, search algorithms, sorting algorithms, stacks (LIFO), queues (FIFO), priority queues, deques, system integration, subprocess management, time-series data, alert systems, bash parsing
+**Concepts:** CLI development, data persistence, error handling, security programming, documentation, arrays & lists, search algorithms, sorting algorithms, stacks (LIFO), queues (FIFO), priority queues, deques, system integration, subprocess management, time-series data, alert systems, bash parsing, recursion, binary search trees (BST), tree traversals (DFS/BFS), N-ary trees, file system operations, recursive algorithms
 
 ---
 
@@ -165,8 +196,9 @@ _Each day will introduce new concepts building toward Cloud Engineering applicat
 - **[Day 1 Projects](day1/)** — Unit Converter, Phone Book CLI & Password Generator
 - **[Day 2 Projects](day2/)** — Smart Todo List with Arrays & Search Algorithms
 - **[Day 3 Projects](day3/)** — Balanced Brackets, Command History, Task Queue & System Monitor
-- **[Latest Code](day3/system_monitor.py)** — Most recent project
-- **[Learning Notes](day3/README.md)** — Detailed progress documentation
+- **[Day 4 Projects](day4/)** — Binary Search Tree & Directory Tree Explorer
+- **[Latest Code](day4/Directory%20Tree%20Explorer/dir_explorer.py)** — Most recent project
+- **[Learning Notes](day4/README.md)** — Detailed progress documentation
 
 ---
 
