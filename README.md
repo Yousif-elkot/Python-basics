@@ -135,7 +135,38 @@ Each day includes hands-on projects, code improvements, and detailed documentati
 
 ---
 
-### 🚀 **Days 5-30** — _The Adventure Continues..._
+### ✅ **Day 5** — _Hash Tables, Dictionaries & Text Analysis_
+
+� **[View Details →](day5/README.md)**
+
+**🗂️ Custom Hash Table Implementation**
+
+- Hash function design using ASCII sum modulo table size
+- Collision handling with chaining (linked lists in buckets)
+- Dynamic resizing with load factor monitoring (> 0.7 triggers resize)
+- Complete CRUD operations: insert, search, delete
+- Automatic table doubling and rehashing of all items
+- Statistics tracking (count, collisions, load factor)
+- O(1) average-case lookup performance
+
+**📊 Word Frequency Analyzer CLI**
+
+- Text file reading with encoding support and error handling
+- Text tokenization using regular expressions (regex)
+- Stop word filtering (50+ common words: the, is, and, etc.)
+- Frequency counting with Python's Counter
+- Top N word analysis with bar chart visualization
+- Dual export: JSON and CSV formats
+- Full CLI with argparse: --top, --no-filter, --export, --output flags
+- Production-ready text analysis tool
+
+**💡 Key Skills:** Hash tables (O(1) lookup), Hash functions, Collision handling (chaining), Load factor & resizing, Python dictionaries internals, collections.Counter, collections.defaultdict, Regular expressions (re module), Text parsing & tokenization, CSV module, JSON serialization, CLI argument parsing, Data visualization (bar charts)
+
+**☁️ Cloud Engineering Bridge:** Configuration management (key-value stores like AWS Parameter Store), Caching strategies (ElastiCache, CloudFront), Log analysis and metrics aggregation, CloudWatch Logs Insights queries, Data processing pipelines, ETL operations
+
+---
+
+### �🚀 **Days 6-30** — _The Adventure Continues..._
 
 _Each day will introduce new concepts building toward Cloud Engineering applications_
 
@@ -145,11 +176,12 @@ _Each day will introduce new concepts building toward Cloud Engineering applicat
 
 ### **Python Mastery**
 
-- [ ✅ ] Core syntax and data structures
-- [ ✅ ] Arrays, lists, and linear data structures
+- [✅] Core syntax and data structures
+- [✅] Arrays, lists, and linear data structures
+- [✅] Hash tables and dictionaries
+- [✅] Regular expressions and text processing
 - [ ] Object-oriented programming
 - [ ] Error handling and testing
-- [ ] File I/O and data processing
 - [ ] API development and consumption
 
 ### **Development Skills**
@@ -174,11 +206,11 @@ _Each day will introduce new concepts building toward Cloud Engineering applicat
 
 | Metric                | Count  |
 | --------------------- | ------ |
-| **Days Completed**    | 4 / 30 |
-| **Projects Built**    | 13     |
-| **Functions Written** | 150+   |
-| **Git Commits**       | 40+    |
-| **Lines of Code**     | 3800+  |
+| **Days Completed**    | 5 / 30 |
+| **Projects Built**    | 15     |
+| **Functions Written** | 180+   |
+| **Git Commits**       | 45+    |
+| **Lines of Code**     | 4200+  |
 
 ---
 
@@ -186,8 +218,8 @@ _Each day will introduce new concepts building toward Cloud Engineering applicat
 
 **Languages:** Python 3, Bash  
 **Tools:** Git, GitHub, VS Code, Linux CLI  
-**Libraries:** json, sys, typing, argparse, string, random, datetime, os, collections, heapq, subprocess, dataclasses  
-**Concepts:** CLI development, data persistence, error handling, security programming, documentation, arrays & lists, search algorithms, sorting algorithms, stacks (LIFO), queues (FIFO), priority queues, deques, system integration, subprocess management, time-series data, alert systems, bash parsing, recursion, binary search trees (BST), tree traversals (DFS/BFS), N-ary trees, file system operations, recursive algorithms
+**Libraries:** json, sys, typing, argparse, string, random, datetime, os, collections, heapq, subprocess, dataclasses, re, csv  
+**Concepts:** CLI development, data persistence, error handling, security programming, documentation, arrays & lists, search algorithms, sorting algorithms, stacks (LIFO), queues (FIFO), priority queues, deques, system integration, subprocess management, time-series data, alert systems, bash parsing, recursion, binary search trees (BST), tree traversals (DFS/BFS), N-ary trees, file system operations, recursive algorithms, hash tables, collision handling, load factor, O(1) lookup, regular expressions, text parsing, data export (JSON/CSV)
 
 ---
 
@@ -197,8 +229,9 @@ _Each day will introduce new concepts building toward Cloud Engineering applicat
 - **[Day 2 Projects](day2/)** — Smart Todo List with Arrays & Search Algorithms
 - **[Day 3 Projects](day3/)** — Balanced Brackets, Command History, Task Queue & System Monitor
 - **[Day 4 Projects](day4/)** — Binary Search Tree & Directory Tree Explorer
-- **[Latest Code](day4/Directory%20Tree%20Explorer/dir_explorer.py)** — Most recent project
-- **[Learning Notes](day4/README.md)** — Detailed progress documentation
+- **[Day 5 Projects](day5/)** — Custom Hash Table & Word Frequency Analyzer
+- **[Latest Code](day5/word_frequency.py)** — Most recent project
+- **[Progress Tracker](PROGRESS_TRACKER.md)** — Detailed daily progress and stats
 
 ---
 
