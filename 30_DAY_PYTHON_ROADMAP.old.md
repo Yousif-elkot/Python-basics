@@ -1,11 +1,8 @@
 # 🚀 30-Day Python → Cloud/DevOps Roadmap (Optimized)
 
-> **🎉 ENHANCED VERSION AVAILABLE!** Check out `30_DAY_PYTHON_WITH_AWS_ROADMAP.md` for a comprehensive  
-> roadmap that integrates AWS Educate courses for parallel learning (Python coding + AWS badges + CCP prep)!
-
 > **Mission:** Complete Python fundamentals in 30 days, integrate Java OOP from college, then transition to DevOps/Cloud  
 > **Philosophy:** Flexible but focused • Build practical projects • No time wasted on theory-only learning  
-> **Current Status:** Week 1 COMPLETE! ✅ (7/7 days done) • 20+ projects built • 100% test success rate
+> **Current Status:** Day 4 complete (13% done) • 13 projects built • Strong momentum
 
 ---
 
