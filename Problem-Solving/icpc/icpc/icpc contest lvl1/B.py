@@ -30,8 +30,8 @@ def solve():
     prime_factors = get_prime_factors(n)
 
     if not prime_factors:
-         print("NO")
-         return
+        print("NO")
+        return
 
     pos = 0
     is_task_string = True
