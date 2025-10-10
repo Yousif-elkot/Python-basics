@@ -16,21 +16,21 @@ My immediate goals are to build a strong foundation in three key areas:
 
 ## 📂 Repository Structure
 
-This repository is organized into distinct skill categories to keep the learning process modular and easy to navigate.
+This repository is organized into distinct skill categories to keep the learning process modular and easy to navigate. Click on any folder name below to explore its contents.
 
-* ### `/Programming/`
+* ### [`/Programming/`](./Programming/)
     This directory contains all my work related to specific programming languages. Each language has its own subfolder.
-    * **`/python/`**: Daily exercises, scripts, and projects written in Python.
-    * **`/java/`**: Code focused on learning Java and its OOP concepts.
+    * **[`/python/`](./Programming/python/)**: Daily exercises, scripts, and projects written in Python.
+    * **[`/java/`](./Programming/java/)**: Code focused on learning Java and its OOP concepts.
 
-* ### `/Problem-Solving/`
+* ### [`/Problem-Solving/`](./Problem-Solving/)
     This directory is dedicated to improving my knowledge of Data Structures and Algorithms (DSA) through practice.
-    * **`/icpc/`**: My solutions and practice sheets for the International Collegiate Programming Contest (ICPC).
+    * **[`/icpc/`](./Problem-Solving/icpc/)**: My solutions and practice sheets for the International Collegiate Programming Contest (ICPC).
 
-* ### `/Linux/`
+* ### [`/Linux/`](./Linux/)
     *Work in progress.* This will house my notes on the Linux command line, shell scripts for automation, and system administration tasks.
 
-* ### `/AWS/`
+* ### [`/AWS/`](./AWS/)
     *Work in progress.* This will contain my study notes, hands-on labs, and projects related to Amazon Web Services (AWS) as I prepare for certification and real-world application.
 
 ---
