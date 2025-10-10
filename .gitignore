@@ -30,3 +30,7 @@ htmlcov/
 # Project specific
 *.log
 tasks.json
+
+# roadmaps dump folder
+roadmaps/
+
