@@ -19,7 +19,7 @@ fi
 echo "Inode Usage Report for '$DIR_PATH'"
 echo "-----------------------------------"
 # 5. Find all subdirectories within TARGET_DIR.
-find "$DIR_PATH" -minedepth 1 -type d | while read -r subdir; do
+find "$DIR_PATH" -mindepth 1 -type d | while read -r subdir; do
 # 6. For each subdirectory found, count the number of files inside it.
     count=$(find "$subdir" -maxdepth 1 -type f | wc -l)
 # 7. Format the output to show the count and the directory name.
