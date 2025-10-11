@@ -1,0 +1,38 @@
+#SERVICE FILE PSEUDOCODE:
+#1. [Unit] section:
+#   - Add description
+#   - Set dependency: start after network is available   
+
+[Unit]
+Description=Flask Web Application Demo - day 10 systemd Project
+After=network.target
+# this ensures the service starts only after network is available
+
+[Service]
+Type=simple
+# 'simple' means the process runs in foreground
+
+User=kot
+
+WorkingDirectory=%h/projects/git/Linux/day10-systemd
+# %h expands to user's home directory
+
+Environment="PATH=%h/.local/bin:/usr/local/bin:/usr/bin"
+# Ensure Python can find Flask if installed in user environment
+
+ExecStart=/usr/bin/python3 %h/projects/git/Linux/day10-systemd/flask_app.py
+# Full path to Python and our application
+
+Restart=on-failure
+# Restart the service if it exits with failure code
+
+RestartSec=5
+# Wait 5 seconds before attempting restart
+
+StandardOutput=journal
+StandardError=journal
+# Send all output to systemd journal (viewable with journalctl)
+
+[Install]
+WantedBy=multi-user.target
+# Start this service in multi-user mode (normal system boot)
