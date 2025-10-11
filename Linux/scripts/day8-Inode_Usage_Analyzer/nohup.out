@@ -1,1 +1,0 @@
-Usage: ./analyze_inodes.sh <filesystem> (e.g., /dev/sda1 or /home)
